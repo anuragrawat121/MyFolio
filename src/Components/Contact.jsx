@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -52,18 +52,20 @@ const Contact = () => {
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://www.instagram.com/rwt._.anurag"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
-            aria-label="Twitter"
+            aria-label="Instagram"
           >
-            <Twitter className="w-5 h-5" />
+            <Instagram className="w-5 h-5" />
           </a>
         </div>
 
         <a
-          href="mailto:arwt8947@gmail.com"
+          href="https://wa.me/7017349285?text=Hi%20Anurag%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary"
           style={{ display: "inline-flex" }}
         >

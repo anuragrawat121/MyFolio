@@ -1,4 +1,5 @@
 import React from "react";
+import Globe from "./Globe";
 
 const About = () => {
   return (
@@ -9,7 +10,32 @@ const About = () => {
           Get to know more about my journey and expertise
         </p>
       </div>
-      <div className="about-content">
+      <div
+        className="about-content"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Globe />
+
+        <div className="remote-badge">
+          <span>🌍</span>
+          <span>Remote Ready</span>
+        </div>
+
+        <p
+          className="section-subtitle"
+          style={{
+            color: "var(--text-primary)",
+            fontWeight: "600",
+            marginBottom: "1.5rem",
+          }}
+        >
+          World-class code, from anywhere on the globe.
+        </p>
+
         <p
           style={{
             color: "var(--text-secondary)",

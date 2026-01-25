@@ -7,6 +7,7 @@ const Project = () => {
       description:
         "A modern portfolio website built with React and Tailwind CSS",
       tech: ["React", "Tailwind", "JavaScript"],
+      link: "https://anuragrawat121.github.io/React-portFolio/",
     },
     {
       title: "E-Commerce Platform",
@@ -27,7 +28,7 @@ const Project = () => {
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">Some of my recent work</p>
       </div>
-      <div className="skills-grid">
+      <div className="projects-grid">
         {projects.map((project, index) => (
           <div key={index} className="skill-item">
             <p
@@ -51,6 +52,7 @@ const Project = () => {
                 gap: "0.5rem",
                 flexWrap: "wrap",
                 justifyContent: "center",
+                marginBottom: "1rem",
               }}
             >
               {project.tech.map((tech, i) => (
@@ -68,6 +70,21 @@ const Project = () => {
                 </span>
               ))}
             </div>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{
+                  fontSize: "0.85rem",
+                  padding: "0.5rem 1rem",
+                  display: "inline-block",
+                }}
+              >
+                View Demo
+              </a>
+            )}
           </div>
         ))}
       </div>

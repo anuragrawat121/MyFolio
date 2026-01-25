@@ -34,7 +34,7 @@ const Services = () => {
         <h2 className="section-title">Services</h2>
         <p className="section-subtitle">What I can do for you</p>
       </div>
-      <div className="skills-grid">
+      <div className="services-grid">
         {services.map((service, index) => (
           <div key={index} className="skill-item">
             <div

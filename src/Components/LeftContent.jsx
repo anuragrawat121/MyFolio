@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const LeftContent = () => {
-  const [text, setText] = useState("");
   const fullText = "Software Developer";
-  const [index, setIndex] = useState(0);
-  const [startTyping, setStartTyping] = useState(false);
-
-  // Wait for loader to finish before starting typewriter
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setStartTyping(true);
-    }, 2100); // Start typing 100ms after loader finishes (2000ms)
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [text, setText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    if (startTyping && index < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText((prev) => prev + fullText.charAt(index));
-        setIndex((prev) => prev + 1);
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [index, fullText, startTyping]);
+    // Wait for loader (2 seconds) + small delay
+    const startDelay = setTimeout(
+      () => {
+        // Start typing animation
+        if (charIndex < fullText.length) {
+          const typingTimeout = setTimeout(() => {
+            setText(fullText.substring(0, charIndex + 1));
+            setCharIndex(charIndex + 1);
+          }, 100);
+          return () => clearTimeout(typingTimeout);
+        }
+      },
+      charIndex === 0 ? 2100 : 0,
+    );
+
+    return () => clearTimeout(startDelay);
+  }, [charIndex, fullText]);
 
   const buttontagLine = "</> Available For Freelance Work";
 
@@ -33,6 +32,12 @@ const LeftContent = () => {
       <div className="hero-badge mt-0 lg:mt-0">{buttontagLine}</div>
       <h1 id="hero-title" className="hero-title whitespace-nowrap">
         {text}
+        <span
+          className="cursor"
+          style={{ opacity: charIndex < fullText.length ? 1 : 0 }}
+        >
+          |
+        </span>
       </h1>
       <p className="hero-description">
         Creating Digital Experiences That Matter
@@ -43,10 +48,38 @@ const LeftContent = () => {
         using cutting-edge technologies and best practices.
       </p>
       <div className="cta-buttons justify-center lg:justify-start">
-        <a href="/projects" className="btn btn-primary">
+        <a
+          href="#projects"
+          className="btn btn-primary"
+          onClick={(e) => {
+            e.preventDefault();
+            const element = document.getElementById("projects");
+            if (element) {
+              const offset = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - offset;
+              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+          }}
+        >
           View Projects
         </a>
-        <a href="/contact" className="btn btn-secondary">
+        <a
+          href="#contact"
+          className="btn btn-secondary"
+          onClick={(e) => {
+            e.preventDefault();
+            const element = document.getElementById("contact");
+            if (element) {
+              const offset = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - offset;
+              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+          }}
+        >
           Contact Me
         </a>
       </div>
@@ -68,12 +101,12 @@ const LeftContent = () => {
           <Linkedin className="w-5 h-5" />
         </a>
         <a
-          href="https://twitter.com/"
+          href="https://www.instagram.com/rwt._.anurag"
           target="_blank"
           className="social-link"
           rel="noopener noreferrer"
         >
-          <Twitter className="w-5 h-5" />
+          <Instagram className="w-5 h-5" />
         </a>
         <a href="mailto:arwt8947@gmail.com" className="social-link">
           <Mail className="w-5 h-5" />

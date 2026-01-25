@@ -6,21 +6,28 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { mode, toggleMode } = useContext(ThemeContext);
   const [logoText, setLogoText] = useState("");
-  const fullLogoText = "Hello, I'm Anurag";
+  const fullLogoText = "Hello, I'm Anurag !";
 
   useEffect(() => {
     let index = 0;
-    const typingInterval = setInterval(() => {
-      if (index < fullLogoText.length) {
-        setLogoText(fullLogoText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 100);
+    setLogoText(""); // Reset text on mount
 
-    return () => clearInterval(typingInterval);
-  }, []);
+    // Wait for loader to finish (2 seconds) before starting
+    const loaderDelay = setTimeout(() => {
+      const typingInterval = setInterval(() => {
+        if (index < fullLogoText.length) {
+          setLogoText(fullLogoText.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 100);
+
+      return () => clearInterval(typingInterval);
+    }, 2000); // Wait 2 seconds for loader
+
+    return () => clearTimeout(loaderDelay);
+  }, []); // Empty dependency array - runs once on mount
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -48,13 +55,8 @@ const Navbar = () => {
           }}
         >
           {logoText}
-          {logoText.length < fullLogoText.length && <span className="cursor">|</span>}
-          {logoText.length >= fullLogoText.length && (
-            <img 
-              src="https://img.icons8.com/?size=100&id=11730&format=png&color=000000" 
-              alt="wave"
-              style={{ width: "24px", height: "24px", display: "inline-block" }}
-            />
+          {logoText.length < fullLogoText.length && (
+            <span className="cursor">|</span>
           )}
         </a>
 
@@ -214,6 +216,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
