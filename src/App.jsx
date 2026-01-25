@@ -28,7 +28,7 @@ function App() {
         <Navbar />
         <div
           id="home"
-          className="flex flex-col lg:flex-row w-full min-h-screen justify-center lg:justify-between items-center px-4 md:px-8 lg:px-16 pt-20 md:pt-24 pb-0 gap-8 lg:gap-0"
+          className="flex flex-col lg:flex-row w-full min-h-screen justify-center lg:justify-between items-center px-6 md:px-12 lg:px-16 pt-32 pb-12 gap-10 lg:gap-0"
         >
           <LeftContent />
           <RightContent />

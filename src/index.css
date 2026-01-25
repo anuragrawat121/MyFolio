@@ -521,7 +521,7 @@ body::before {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   /* margin-bottom: 1rem; */
   background: var(--primary-gradient);
@@ -648,10 +648,16 @@ body::before {
 
 .image-container {
   position: relative;
-  width: 250px; /* Smaller for mobile */
+  width: 250px; /* Default for mobile */
   max-width: 100%;
   aspect-ratio: 1;
   height: auto;
+}
+
+@media (max-width: 380px) {
+  .image-container {
+    width: 200px;
+  }
 }
 
 @media (min-width: 768px) {
