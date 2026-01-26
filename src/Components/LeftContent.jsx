@@ -42,44 +42,16 @@ const LeftContent = () => {
       <p className="hero-description">
         Creating Digital Experiences That Matter
       </p>
-      <p className="hero-subtitle w-full lg:w-3/4 xl:w-1/2">
+      <p className="hero-subtitle w-full lg:w-full xl:w-5/6">
         Passionate web developer specializing in modern, responsive websites and
         web applications. I transform ideas into stunning digital experiences
         using cutting-edge technologies and best practices.
       </p>
       <div className="cta-buttons justify-center lg:justify-start">
-        <a
-          href="#projects"
-          className="btn btn-primary"
-          onClick={(e) => {
-            e.preventDefault();
-            const element = document.getElementById("projects");
-            if (element) {
-              const offset = 80;
-              const elementPosition = element.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-            }
-          }}
-        >
+        <a href="#projects" className="btn btn-primary">
           View Projects
         </a>
-        <a
-          href="#contact"
-          className="btn btn-secondary"
-          onClick={(e) => {
-            e.preventDefault();
-            const element = document.getElementById("contact");
-            if (element) {
-              const offset = 80;
-              const elementPosition = element.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - offset;
-              window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-            }
-          }}
-        >
+        <a href="#contact" className="btn btn-secondary">
           Contact Me
         </a>
       </div>

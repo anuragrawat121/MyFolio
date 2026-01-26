@@ -29,31 +29,10 @@ const Navbar = () => {
     return () => clearTimeout(loaderDelay);
   }, []); // Empty dependency array - runs once on mount
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80; // navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a
-          href="#home"
-          className="logo"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("home");
-          }}
-        >
+        <a href="#home" className="logo">
           {logoText}
           {logoText.length < fullLogoText.length && (
             <span className="cursor">|</span>
@@ -62,64 +41,22 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="nav-links hidden md:flex items-center gap-8">
-          <a
-            className="nav-link"
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("home");
-            }}
-          >
+          <a className="nav-link" href="#home">
             Home
           </a>
-          <a
-            className="nav-link"
-            href="#about"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("about");
-            }}
-          >
+          <a className="nav-link" href="#about">
             About
           </a>
-          <a
-            className="nav-link"
-            href="#skills"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("skills");
-            }}
-          >
+          <a className="nav-link" href="#skills">
             Skills
           </a>
-          <a
-            className="nav-link"
-            href="#services"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("services");
-            }}
-          >
+          <a className="nav-link" href="#services">
             Services
           </a>
-          <a
-            className="nav-link"
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("projects");
-            }}
-          >
+          <a className="nav-link" href="#projects">
             Projects
           </a>
-          <a
-            className="nav-link"
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("contact");
-            }}
-          >
+          <a className="nav-link" href="#contact">
             Contact
           </a>
           <button onClick={toggleMode} className="theme-toggle-btn">
@@ -145,66 +82,42 @@ const Navbar = () => {
             <a
               className="nav-link"
               href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("home");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               Home
             </a>
             <a
               className="nav-link"
               href="#about"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("about");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               About
             </a>
             <a
               className="nav-link"
               href="#skills"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("skills");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               Skills
             </a>
             <a
               className="nav-link"
               href="#services"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("services");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               Services
             </a>
             <a
               className="nav-link"
               href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("projects");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               Projects
             </a>
             <a
               className="nav-link"
               href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contact");
-                setIsOpen(false);
-              }}
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
