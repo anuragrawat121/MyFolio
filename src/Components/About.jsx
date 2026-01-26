@@ -4,7 +4,7 @@ import Globe from "./Globe";
 const About = () => {
   return (
     <section className="skills-preview" id="about">
-      <div className="section-header">
+      <div className="section-header text-center">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">
           Get to know more about my journey and expertise
@@ -16,6 +16,7 @@ const About = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          textAlign: "center",
         }}
       >
         <Globe />

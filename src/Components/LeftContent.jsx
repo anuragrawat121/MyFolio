@@ -28,12 +28,9 @@ const LeftContent = () => {
   const buttontagLine = "</> Available For Freelance Work";
 
   return (
-    <section className="hero-content w-full lg:w-3/5 flex flex-col items-center lg:items-start text-center lg:text-left mt-4 lg:mt-0">
+    <section className="hero-content w-full lg:w-3/5 flex flex-col items-center md:items-center lg:items-start text-center md:text-center lg:text-left mt-4 lg:mt-0">
       <div className="hero-badge mt-0 lg:mt-0">{buttontagLine}</div>
-      <h1
-        id="hero-title"
-        className="hero-title whitespace-normal md:whitespace-nowrap"
-      >
+      <h1 id="hero-title" className="hero-title whitespace-normal">
         {text}
         <span
           className="cursor"
