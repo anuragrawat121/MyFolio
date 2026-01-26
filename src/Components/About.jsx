@@ -32,6 +32,7 @@ const About = () => {
             color: "var(--text-primary)",
             fontWeight: "600",
             marginBottom: "1.5rem",
+            textAlign: "center",
           }}
         >
           World-class code, from anywhere on the globe.
@@ -44,6 +45,7 @@ const About = () => {
             lineHeight: "1.8",
             maxWidth: "800px",
             margin: "0 auto",
+            textAlign: "center",
           }}
         >
           I'm a passionate web developer with expertise in creating modern,
