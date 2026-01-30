@@ -17,7 +17,7 @@ const Services = () => {
     {
       title: "Software Development",
       description:
-        "Developing interactive frontends with React, JavaScript, and modern frameworks",
+        "Developing robust software solutions using modern technologies and frameworks",
       icon: "⚛️",
     },
     {
