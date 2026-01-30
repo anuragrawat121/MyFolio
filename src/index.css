@@ -681,7 +681,7 @@ body::before {
 }
 
 :root.light-theme .image-glow {
-  opacity: 0.8; /* full visibility on light mode */
+  opacity: 1; /* full visibility on light mode */
 }
 
 .image-glow {
@@ -692,7 +692,7 @@ body::before {
   bottom: -20px;
   background: var(--primary-gradient);
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 1;
   animation: float 6s ease-in-out infinite;
 }
 
