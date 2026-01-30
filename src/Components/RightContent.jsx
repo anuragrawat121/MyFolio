@@ -1,4 +1,5 @@
 import React from "react";
+import pfp from "../assets/pfp.jpeg";
 
 const RightContent = () => {
   return (
@@ -6,11 +7,7 @@ const RightContent = () => {
       <div className="hero-image">
         <div className="image-container">
           <div className="image-glow ">
-            <img
-              className="profile-image"
-              src="https://anuragrawat121.github.io/myPortfolio/portfolio.jpg"
-              alt="My img"
-            />
+            <img className="profile-image" src={pfp} alt="My img" />
             <div className="floating-element">
               <a
                 href="https://react.dev/"
