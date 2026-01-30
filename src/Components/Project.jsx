@@ -7,7 +7,7 @@ const Project = () => {
       description:
         "A modern portfolio website built with React and Tailwind CSS",
       tech: ["React", "Tailwind", "JavaScript"],
-      link: "https://anuragrawat121.github.io/React-portFolio/",
+      link: "https://anuragrawat121.github.io/MyFolio/",
     },
     {
       title: "College Event Manager",
