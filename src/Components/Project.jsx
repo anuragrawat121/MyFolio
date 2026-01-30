@@ -10,9 +10,10 @@ const Project = () => {
       link: "https://anuragrawat121.github.io/React-portFolio/",
     },
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration",
-      tech: ["React", "Node.js", "MongoDB"],
+      title: "College Event Manager",
+      description: "Full-stack college event management solution",
+      tech: ["React", "Tailwind", "Node.js", "MongoDB"],
+      link: "https://college-event-manager-ko2c.vercel.app/",
     },
     {
       title: "Employee Management System",
@@ -30,7 +31,11 @@ const Project = () => {
       </div>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="skill-item">
+          <div
+            key={index}
+            className="skill-item"
+            style={{ display: "flex", flexDirection: "column" }}
+          >
             <p
               className="skill-name"
               style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}
@@ -80,6 +85,7 @@ const Project = () => {
                   fontSize: "0.85rem",
                   padding: "0.5rem 1rem",
                   display: "inline-block",
+                  marginTop: "auto",
                 }}
               >
                 View Demo
