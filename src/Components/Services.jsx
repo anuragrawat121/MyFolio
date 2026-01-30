@@ -15,7 +15,7 @@ const Services = () => {
       icon: "🎨",
     },
     {
-      title: "Frontend Development",
+      title: "Software Development",
       description:
         "Developing interactive frontends with React, JavaScript, and modern frameworks",
       icon: "⚛️",
