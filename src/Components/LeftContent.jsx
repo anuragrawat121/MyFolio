@@ -1,29 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 const LeftContent = () => {
   const fullText = "Software Developer";
-  const [text, setText] = useState("");
-  const [charIndex, setCharIndex] = useState(0);
-
-  useEffect(() => {
-    // Wait for loader (2 seconds) + small delay
-    const startDelay = setTimeout(
-      () => {
-        // Start typing animation
-        if (charIndex < fullText.length) {
-          const typingTimeout = setTimeout(() => {
-            setText(fullText.substring(0, charIndex + 1));
-            setCharIndex(charIndex + 1);
-          }, 100);
-          return () => clearTimeout(typingTimeout);
-        }
-      },
-      charIndex === 0 ? 2100 : 0,
-    );
-
-    return () => clearTimeout(startDelay);
-  }, [charIndex, fullText]);
+  const text = useTypewriter(fullText, { delay: 2100, speed: 100 });
 
   const buttontagLine = "</> Available For Freelance Work";
 
@@ -32,10 +13,7 @@ const LeftContent = () => {
       <div className="hero-badge mt-0 lg:mt-0">{buttontagLine}</div>
       <h1 id="hero-title" className="hero-title whitespace-normal">
         {text}
-        <span
-          className="cursor"
-          style={{ opacity: charIndex < fullText.length ? 1 : 0 }}
-        >
+        <span className="typed-cursor" aria-hidden="true">
           |
         </span>
       </h1>

@@ -1,42 +1,22 @@
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
+import { useTypewriter } from "../hooks/useTypewriter";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { mode, toggleMode } = useContext(ThemeContext);
-  const [logoText, setLogoText] = useState("");
   const fullLogoText = "Hello, I'm Anurag !";
-
-  useEffect(() => {
-    let index = 0;
-    setLogoText(""); // Reset text on mount
-
-    // Wait for loader to finish (2 seconds) before starting
-    const loaderDelay = setTimeout(() => {
-      const typingInterval = setInterval(() => {
-        if (index < fullLogoText.length) {
-          setLogoText(fullLogoText.slice(0, index + 1));
-          index++;
-        } else {
-          clearInterval(typingInterval);
-        }
-      }, 100);
-
-      return () => clearInterval(typingInterval);
-    }, 2000); // Wait 2 seconds for loader
-
-    return () => clearTimeout(loaderDelay);
-  }, []); // Empty dependency array - runs once on mount
+  const logoText = useTypewriter(fullLogoText, { delay: 2000, speed: 100 });
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <a href="#home" className="logo">
           {logoText}
-          {logoText.length < fullLogoText.length && (
-            <span className="cursor">|</span>
-          )}
+          <span className="typed-cursor" aria-hidden="true">
+            |
+          </span>
         </a>
 
         {/* Desktop Menu */}

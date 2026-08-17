@@ -16,10 +16,18 @@ const Project = () => {
       link: "https://college-event-manager-ko2c.vercel.app/",
     },
     {
-      title: "Employee Management System",
+      title: "MandiSync",
       description:
-        "Task assignment and employee management system with role-based access",
-      tech: ["React", "Tailwind", "JavaScript"],
+        "Crop arbitrage dashboard for Indian farmers using live Agmarknet prices",
+      tech: ["Next.js", "FastAPI", "PostGIS", "TypeScript"],
+      link: "https://anuragrawat121.github.io/MandiSync/",
+      repo: "https://github.com/anuragrawat121/MandiSync",
+    },
+    {
+      title: "ArtByAnjali",
+      description:
+        "High-performance MERN art portfolio with scroll-driven animations and a custom admin dashboard",
+      tech: ["React", "Node.js", "MongoDB", "GSAP"],
     },
   ];
 
@@ -75,21 +83,47 @@ const Project = () => {
                 </span>
               ))}
             </div>
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
+            {(project.link || project.repo) && (
+              <div
                 style={{
-                  fontSize: "0.85rem",
-                  padding: "0.5rem 1rem",
-                  display: "inline-block",
+                  display: "flex",
+                  gap: "0.5rem",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
                   marginTop: "auto",
                 }}
               >
-                View Demo
-              </a>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    style={{
+                      fontSize: "0.85rem",
+                      padding: "0.5rem 1rem",
+                      display: "inline-block",
+                    }}
+                  >
+                    View Demo
+                  </a>
+                )}
+                {project.repo && (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    style={{
+                      fontSize: "0.85rem",
+                      padding: "0.5rem 1rem",
+                      display: "inline-block",
+                    }}
+                  >
+                    View Repo
+                  </a>
+                )}
+              </div>
             )}
           </div>
         ))}

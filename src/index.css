@@ -493,20 +493,13 @@ body::before {
   animation: pulse 2s infinite;
 }
 
-.cursor {
+.typed-cursor {
   display: inline-block;
-  width: 1px; /* thin bar cursor */
-  height: 1em;
-  margin-left: 6px;
-  background: var(--text-primary); /* visible in both themes */
-  animation: blink 0.8s steps(1) infinite;
-  vertical-align: -0.1em;
-}
-
-#hero-title::after {
-  content: "|";
-  animation: blink 0.7s infinite;
   margin-left: 4px;
+  color: var(--text-primary);
+  -webkit-text-fill-color: var(--text-primary);
+  background: none;
+  animation: blink 0.8s steps(1) infinite;
 }
 
 @keyframes blink {
