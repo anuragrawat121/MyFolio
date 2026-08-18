@@ -13,27 +13,23 @@ const Loader = ({ isLoading }) => {
           }
           return prev + 1;
         });
-      }, 20); // 100 steps * 20ms = 2000ms
+      }, 20);
       return () => clearInterval(interval);
     }
   }, [isLoading]);
 
   return (
-    <div
-      id="loader"
-      className={
-        !isLoading
-          ? "hidden"
-          : "fixed inset-0 bg-[#0a0b10] z-9999 flex flex-col items-center justify-center transition-opacity duration-500"
-      }
-    >
-      <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden mb-2">
-        <div
-          className="h-full bg-white transition-all ease-out duration-75"
-          style={{ width: `${progress}%` }}
-        ></div>
+    <div className={`loader ${isLoading ? "" : "is-done"}`} aria-hidden={!isLoading}>
+      <div className="loader-mark">
+        Anurag <em>Rawat</em>
       </div>
-      <div className="text-white font-mono text-sm">{progress}%</div>
+      <div className="loader-track">
+        <div className="loader-fill" style={{ width: `${progress}%` }} />
+      </div>
+      <div className="loader-meta">
+        <span>Loading</span>
+        <span>{progress}%</span>
+      </div>
     </div>
   );
 };

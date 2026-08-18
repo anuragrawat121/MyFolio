@@ -1,37 +1,34 @@
 import React from "react";
 import { Mail, Linkedin, Github, Instagram } from "lucide-react";
+import Reveal from "./Reveal";
+import SectionHeader from "./SectionHeader";
 
 const Contact = () => {
   return (
-    <section className="skills-preview" id="contact">
-      <div className="section-header">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle">
-          Let's work together on your next project
+    <section className="site-section" id="contact">
+      <Reveal>
+        <SectionHeader index="06" kicker="Contact" title="Let’s make" italic="something." />
+      </Reveal>
+      <Reveal delay={100} className="contact-panel">
+        <p className="contact-headline">
+          Have a project
+          <br />
+          <em>in mind?</em>
         </p>
-      </div>
-      <div style={{ maxWidth: "600px", margin: "0 auto", textAlign: "center" }}>
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.1rem",
-            marginBottom: "2rem",
-          }}
-        >
-          I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of your vision.
+        <a className="contact-mail" href="mailto:arwt8947@gmail.com">
+          arwt8947@gmail.com
+        </a>
+        <p className="contact-note">
+          Open to freelance, collaborations, and full-time product work. A short
+          note about the problem is enough to start.
         </p>
-
-        <div
-          className="social-links"
-          style={{ justifyContent: "center", marginBottom: "2rem" }}
-        >
+        <div className="social-links" style={{ marginBottom: "1.75rem" }}>
           <a
             href="mailto:arwt8947@gmail.com"
             className="social-link"
             aria-label="Email"
           >
-            <Mail className="w-5 h-5" />
+            <Mail className="w-4 h-4" />
           </a>
           <a
             href="https://github.com/anuragrawat121"
@@ -40,7 +37,7 @@ const Contact = () => {
             className="social-link"
             aria-label="GitHub"
           >
-            <Github className="w-5 h-5" />
+            <Github className="w-4 h-4" />
           </a>
           <a
             href="https://www.linkedin.com/in/anurag-rawat-03884b296"
@@ -49,7 +46,7 @@ const Contact = () => {
             className="social-link"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-5 h-5" />
+            <Linkedin className="w-4 h-4" />
           </a>
           <a
             href="https://www.instagram.com/rwt._.anurag"
@@ -58,20 +55,18 @@ const Contact = () => {
             className="social-link"
             aria-label="Instagram"
           >
-            <Instagram className="w-5 h-5" />
+            <Instagram className="w-4 h-4" />
           </a>
         </div>
-
         <a
           href="https://wa.me/7017349285?text=Hi%20Anurag%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary"
-          style={{ display: "inline-flex" }}
         >
-          Send Message
+          Send a message
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 };

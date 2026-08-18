@@ -1,59 +1,62 @@
 import React from "react";
+import { Code2, Gauge, Layers, PenTool } from "lucide-react";
+import Reveal from "./Reveal";
+import SectionHeader from "./SectionHeader";
+
+const services = [
+  {
+    title: "Web Development",
+    description:
+      "Responsive product interfaces with React, Next.js, and careful performance budgets.",
+    icon: Code2,
+  },
+  {
+    title: "Interface Design",
+    description:
+      "Layouts, type, and motion that make a product feel inevitable instead of decorated.",
+    icon: PenTool,
+  },
+  {
+    title: "Software Systems",
+    description:
+      "APIs, data models, and admin flows that stay maintainable after the first demo.",
+    icon: Layers,
+  },
+  {
+    title: "Performance",
+    description:
+      "Load, interaction, and SEO work so the experience holds up on real devices.",
+    icon: Gauge,
+  },
+];
 
 const Services = () => {
-  const services = [
-    {
-      title: "Web Development",
-      description:
-        "Building responsive and modern web applications using latest technologies",
-      icon: "💻",
-    },
-    {
-      title: "UI/UX Design",
-      description:
-        "Creating beautiful and intuitive user interfaces with great user experience",
-      icon: "🎨",
-    },
-    {
-      title: "Software Development",
-      description:
-        "Developing robust software solutions using modern technologies and frameworks",
-      icon: "⚛️",
-    },
-    {
-      title: "Performance Optimization",
-      description:
-        "Optimizing web applications for speed, SEO, and better user engagement",
-      icon: "⚡",
-    },
-  ];
-
   return (
-    <section className="skills-preview" id="services">
-      <div className="section-header">
-        <h2 className="section-title">Services</h2>
-        <p className="section-subtitle">What I can do for you</p>
-      </div>
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div key={index} className="skill-item">
-            <div
-              className="skill-icon"
-              style={{ fontSize: "3rem", marginBottom: "1rem" }}
-            >
-              {service.icon}
-            </div>
-            <p
-              className="skill-name"
-              style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}
-            >
-              {service.title}
-            </p>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
-              {service.description}
-            </p>
-          </div>
-        ))}
+    <section className="site-section" id="services">
+      <Reveal>
+        <SectionHeader
+          index="04"
+          kicker="Services"
+          title="What I can take"
+          italic="off your plate."
+        />
+      </Reveal>
+      <div className="services-list">
+        {services.map((service, index) => {
+          const Icon = service.icon;
+          return (
+            <Reveal key={service.title} delay={index * 70}>
+              <div className="service-row">
+                <span className="service-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-copy">{service.description}</p>
+                <Icon className="service-icon" size={18} />
+              </div>
+            </Reveal>
+          );
+        })}
       </div>
     </section>
   );

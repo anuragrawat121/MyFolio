@@ -1,27 +1,55 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const dotRef = useRef(null);
+  const ringRef = useRef(null);
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const dot = dotRef.current;
+    const ring = ringRef.current;
+    if (!dot || !ring) return;
+
+    let x = 0;
+    let y = 0;
+    let rx = 0;
+    let ry = 0;
+    let hovering = false;
+    let frame;
+
+    const onMove = (e) => {
+      x = e.clientX;
+      y = e.clientY;
     };
 
-    window.addEventListener("mousemove", moveCursor);
+    const onOver = (e) => {
+      hovering = Boolean(e.target.closest("a, button"));
+      ring.classList.toggle("is-hover", hovering);
+    };
+
+    const loop = () => {
+      rx += (x - rx) * 0.16;
+      ry += (y - ry) * 0.16;
+      dot.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+      ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+      frame = requestAnimationFrame(loop);
+    };
+
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseover", onOver);
+    frame = requestAnimationFrame(loop);
+
     return () => {
-      window.removeEventListener("mousemove", moveCursor);
+      cancelAnimationFrame(frame);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseover", onOver);
     };
   }, []);
 
   return (
-    <div
-      className="fixed top-0 left-0 w-3 h-3 bg-white rounded-full pointer-events-none z-9999 mix-blend-difference shadow-glossy hidden lg:block"
-      style={{
-        transform: `translate3d(${position.x}px, ${position.y}px, 0) translate(-50%, -50%)`,
-        transition: "transform 0.1s ease-out",
-      }}
-    />
+    <>
+      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
+    </>
   );
 };
 
