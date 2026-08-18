@@ -1,4 +1,5 @@
 import React from "react";
+import { Download } from "lucide-react";
 import Globe from "./Globe";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
@@ -44,6 +45,16 @@ const About = () => {
               <span>IN</span>
               <small>Based in India</small>
             </div>
+          </div>
+          <div style={{ marginTop: "1.75rem" }}>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1VafCk3WhuVaIC0FEjFGvBOjzPqeif7qZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary inline-flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" /> Download Resume (PDF)
+            </a>
           </div>
         </Reveal>
       </div>

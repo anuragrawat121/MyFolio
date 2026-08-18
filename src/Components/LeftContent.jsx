@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, FileText } from "lucide-react";
 import { useTypewriter } from "../hooks/useTypewriter";
 
 const LeftContent = () => {
@@ -26,6 +26,14 @@ const LeftContent = () => {
       <div className="cta-buttons">
         <a href="#projects" className="btn btn-primary">
           View work
+        </a>
+        <a
+          href="https://drive.google.com/uc?export=download&id=1VafCk3WhuVaIC0FEjFGvBOjzPqeif7qZ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-secondary"
+        >
+          <FileText className="w-4 h-4" /> Resume
         </a>
         <a href="#contact" className="btn btn-secondary">
           Let&apos;s talk

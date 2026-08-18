@@ -10,6 +10,11 @@ const links = [
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
+  {
+    href: "https://drive.google.com/uc?export=download&id=1VafCk3WhuVaIC0FEjFGvBOjzPqeif7qZ",
+    label: "Resume",
+    isExternal: true,
+  },
 ];
 
 const Navbar = () => {
@@ -36,7 +41,17 @@ const Navbar = () => {
 
         <div className="nav-links">
           {links.map((link) => (
-            <a key={link.href} className="nav-link" href={link.href}>
+            <a
+              key={link.label}
+              className="nav-link"
+              href={link.href}
+              {...(link.isExternal
+                ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
+                : {})}
+            >
               {link.label}
             </a>
           ))}
@@ -72,10 +87,16 @@ const Navbar = () => {
           <div className="mobile-menu-links">
             {links.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 className="nav-link"
                 href={link.href}
                 onClick={() => setIsOpen(false)}
+                {...(link.isExternal
+                  ? {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }
+                  : {})}
               >
                 {link.label}
               </a>
