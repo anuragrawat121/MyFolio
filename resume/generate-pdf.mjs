@@ -19,13 +19,13 @@ for (const f of files) {
 
   const page = await browser.newPage();
   await page.goto(`file:///${htmlPath.replace(/\\/g, "/")}`, {
-    waitUntil: "networkidle0",
+    waitUntil: "domcontentloaded",
   });
   await page.pdf({
     path: outputPath,
     format: "A4",
     printBackground: true,
-    margin: { top: "0.35in", right: "0.45in", bottom: "0.35in", left: "0.45in" },
+    margin: { top: "0.30in", right: "0.45in", bottom: "0.30in", left: "0.45in" },
   });
   await page.close();
 

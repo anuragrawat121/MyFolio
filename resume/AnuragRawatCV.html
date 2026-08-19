@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Anurag Rawat — Resume</title>
+    <title>Anurag Rawat — Software Developer Resume</title>
     <style>
       @page {
         size: A4;
-        margin: 0.32in 0.45in;
+        margin: 0.35in 0.45in;
       }
 
       * {
@@ -16,8 +16,8 @@
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-size: 9.1pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 9pt;
         line-height: 1.28;
         color: #111;
         background: #fff;
@@ -32,63 +32,75 @@
       /* Header */
       .header {
         text-align: center;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
       }
 
       .name {
-        font-size: 19pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 21pt;
         font-weight: 700;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: #000;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
       }
 
       .job-title {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-size: 9.5pt;
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #333;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
       }
 
       .contact {
-        font-size: 8.2pt;
+        font-size: 8.3pt;
         color: #333;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 2px 5px;
+        gap: 2px 6px;
       }
 
       .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
         white-space: nowrap;
       }
 
+      .contact-icon {
+        width: 10px;
+        height: 10px;
+        fill: currentColor;
+      }
+
       .separator {
-        color: #666;
+        color: #777;
         font-weight: 300;
       }
 
       /* Section Titles */
       .section-title {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-size: 9.8pt;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #000;
-        border-bottom: 1px solid #111;
+        border-bottom: 1.5px solid #000;
         padding-bottom: 1px;
-        margin: 7px 0 2px 0;
+        margin: 7px 0 3px 0;
       }
 
       /* Profile Summary */
       .summary {
         text-align: justify;
         text-justify: inter-word;
-        font-size: 9.1pt;
+        font-size: 9pt;
         line-height: 1.28;
         color: #222;
       }
@@ -102,20 +114,23 @@
       }
 
       .item-title {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-weight: 700;
-        font-size: 9.1pt;
+        font-size: 9.2pt;
         color: #000;
       }
 
       .item-date {
-        font-size: 9.1pt;
-        font-weight: 600;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 9pt;
+        font-weight: 400;
         color: #333;
         white-space: nowrap;
       }
 
       .item-subtitle {
-        font-size: 9.1pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 9pt;
         font-style: italic;
         color: #333;
         margin-bottom: 1px;
@@ -128,11 +143,16 @@
       }
 
       li {
-        font-size: 9.1pt;
+        font-size: 9pt;
         color: #222;
         margin-bottom: 1px;
         text-align: justify;
         text-justify: inter-word;
+      }
+
+      strong {
+        font-weight: 700;
+        color: #000;
       }
 
       /* Skills */
@@ -141,15 +161,20 @@
       }
 
       .skills-line {
-        font-size: 9.1pt;
+        font-size: 9pt;
         color: #222;
         margin-bottom: 1.5px;
         line-height: 1.28;
       }
 
       .skills-label {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
         color: #000;
+        display: inline-block;
+        min-width: 105px;
       }
 
       .edu-block {
@@ -157,9 +182,9 @@
       }
 
       .edu-note {
-        font-size: 9.1pt;
+        font-size: 9pt;
         color: #333;
-        margin-top: 0px;
+        margin-top: 1px;
       }
     </style>
   </head>
@@ -168,21 +193,31 @@
       <h1 class="name">ANURAG RAWAT</h1>
       <div class="job-title">Software Developer</div>
       <div class="contact">
-        <span class="contact-item">Pauri Garhwal, Uttarakhand</span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Pauri Garhwal, Uttarakhand
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item">+91 7017349285</span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91 7017349285
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item"><a href="mailto:arwt8947@gmail.com">arwt8947@gmail.com</a></span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:arwt8947@gmail.com">arwt8947@gmail.com</a>
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item"><a href="https://linkedin.com/in/anurag-rawat-03884b296" target="_blank">linkedin.com/in/anurag-rawat-03884b296</a></span>
-        <span class="separator">|</span>
-        <span class="contact-item"><a href="https://github.com/anuragrawat121" target="_blank">github.com/anuragrawat121</a></span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+          <a href="https://linkedin.com/in/anurag-rawat-03884b296" target="_blank">linkedin.com/in/anurag-rawat</a>
+        </span>
       </div>
     </div>
 
     <div class="section-title">PROFILE SUMMARY</div>
     <p class="summary">
-      Software Developer &amp; MCA Candidate (July 2026) engineering web experiences where full-stack precision meets AI-driven development. Proven track record in crafting high-fidelity React 19/Next.js frontends, scalable Node.js architectures, and automated digital ecosystems. Driven by a relentless curiosity to master emerging tech, prompt modern AI tools, and continuously upgrade my personal algorithm to build future-proof software.
+      Passionate <strong>Software Developer</strong> and final-year MCA student with hands-on experience building <strong>responsive, user-centric web applications</strong> and <strong>scalable digital solutions</strong>. Proven track record in developing <strong>full-stack artistic portfolios</strong>, <strong>luxury e-commerce platforms</strong>, and <strong>centralized automation ecosystems</strong>. Committed to <strong>building with AI</strong>, <strong>learning AI technologies consistently</strong>, and <strong>adapting new technologies</strong> to build impactful, intelligent software solutions.
     </p>
 
     <div class="section-title">EXPERIENCE &amp; INTERNSHIP</div>
@@ -193,8 +228,8 @@
     </div>
     <div class="item-subtitle">Codeware IT Pvt. Ltd.</div>
     <ul>
-      <li>Developed a responsive e-commerce platform using React.js and Tailwind CSS, optimizing performance for cross-browser compatibility.</li>
-      <li>Integrated RESTful APIs to ensure high-fidelity UI/UX synchronization and smooth data flow.</li>
+      <li>Developed a <strong>responsive e-commerce platform</strong> using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, optimizing performance for cross-browser compatibility.</li>
+      <li>Integrated <strong>RESTful APIs</strong> to ensure high-fidelity <strong>UI/UX synchronization</strong> and smooth data flow.</li>
     </ul>
 
     <div class="flex-row">
@@ -203,8 +238,8 @@
     </div>
     <div class="item-subtitle">Uttarakhand Media Ventures Pvt. Ltd.</div>
     <ul>
-      <li>Enhanced user experience for a live news portal by developing dynamic UI components and optimizing real-time data flow.</li>
-      <li>Utilized Git for version control and implemented modern development practices for scalability.</li>
+      <li>Enhanced user experience for a <strong>live news portal</strong> by developing <strong>dynamic UI components</strong> and optimizing <strong>real-time data flow</strong>.</li>
+      <li>Utilized <strong>Git</strong> for version control and implemented modern development practices for <strong>scalability</strong>.</li>
     </ul>
 
     <div class="section-title">KEY PROJECTS</div>
@@ -213,44 +248,44 @@
       <span class="item-title">MandiSync | Crop Arbitrage Dashboard for Indian Mandis</span>
     </div>
     <ul>
-      <li>Built a full-stack web application comparing live APMC (Agmarknet) prices across Indian mandis and estimating net profit after transport and fees.</li>
-      <li>Implemented arbitrage ranking, map-based corridor visualization, and lead capture using Next.js, TypeScript, FastAPI, PostgreSQL/PostGIS, and Leaflet.</li>
+      <li>Built a full-stack web application comparing live <strong>APMC (Agmarknet)</strong> prices across Indian mandis and estimating net profit after transport and fees.</li>
+      <li>Implemented arbitrage ranking, map-based corridor visualization, and lead capture using <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>FastAPI</strong>, <strong>PostgreSQL/PostGIS</strong>, and <strong>Leaflet</strong>.</li>
     </ul>
 
     <div class="flex-row">
-      <span class="item-title">ArtByAnjali | Full-Stack Artistic Portfolio</span>
+      <span class="item-title">ArtByAnjali: Full-Stack Artistic Portfolio</span>
     </div>
     <ul>
-      <li>Solved the performance-quality paradox in high-resolution art galleries by developing a custom MERN-based optimization engine.</li>
-      <li>Leveraged ImageKit cloud processing and immersive GSAP animations to deliver a premium, lag-free exhibition experience with a secure admin dashboard.</li>
+      <li>Solved the critical <strong>performance-quality paradox</strong> inherent in high-resolution art galleries by developing a custom <strong>MERN-based optimization engine</strong>.</li>
+      <li>Leveraged <strong>ImageKit</strong> cloud processing and immersive <strong>GSAP animations</strong> to deliver a <strong>premium, lag-free exhibition experience</strong>.</li>
     </ul>
 
     <div class="flex-row">
       <span class="item-title">College Event Management Web App</span>
     </div>
     <ul>
-      <li>Engineered a centralized event automation ecosystem to resolve fragmented campus registrations.</li>
-      <li>Implemented a high-performance hub that reduced administrative bottlenecks and enabled seamless real-time institutional coordination using React, Node.js, Express, and MongoDB.</li>
+      <li>Engineered a <strong>centralized event automation ecosystem</strong> to resolve fragmented campus registrations.</li>
+      <li>Implemented a <strong>high-performance hub</strong> that eliminated administrative bottlenecks and ensured <strong>seamless real-time institutional coordination</strong>.</li>
     </ul>
 
     <div class="flex-row">
       <span class="item-title">Luxury Ecommerce | High-End Retail Platform</span>
     </div>
     <ul>
-      <li>Solved the performance-scalability trade-off in premium digital retail by engineering a high-fidelity React 19 ecosystem.</li>
-      <li>Implemented a bespoke Context-driven state engine and optimized useMemo filtering logic to ensure zero-latency discovery, delivering an immersive dark-themed experience with Framer Motion animations.</li>
+      <li>Solved the <strong>performance-scalability trade-off</strong> in premium digital retail by engineering a <strong>high-fidelity React 19 ecosystem</strong>.</li>
+      <li>Implemented a bespoke <strong>Context-driven state engine</strong> and <strong>optimized useMemo filtering logic</strong> to ensure <strong>zero-latency discovery</strong>, delivering an <strong>immersive dark-themed exhibition</strong> with <strong>Framer Motion animations</strong> for a clinical, high-end consumer experience.</li>
     </ul>
 
     <div class="section-title">TECHNICAL &amp; PROFESSIONAL SKILLS</div>
     <div class="skills-container">
       <p class="skills-line">
-        <span class="skills-label">Technical:</span> React.js, Next.js, Node.js, Express.js, JavaScript, TypeScript, Python, FastAPI, MongoDB, PostgreSQL, PostGIS, REST API, HTML5, CSS3, Tailwind CSS, GSAP, Framer Motion, Git/GitHub, Responsive Web Design.
+        <span class="skills-label">TECHNICAL:</span> React.js, Next.js, Node.js, Express.js, MongoDB, JavaScript, GSAP, Framer Motion, Tailwind CSS, REST API, Git/GitHub.
       </p>
       <p class="skills-line">
-        <span class="skills-label">AI Tools:</span> Cursor, Gemini, Claude, GPT-4o, VS Code, API Testing, UI/UX Implementation.
+        <span class="skills-label">AI TOOLS:</span> <strong>Cursor</strong>, <strong>Antigravity</strong>, <strong>Stitch</strong>, <strong>Gemini</strong>, <strong>Claude</strong>, <strong>GPT-4o</strong>, <strong>Vibe Coding</strong>, VS Code, API Testing, UI/UX Implementation.
       </p>
       <p class="skills-line">
-        <span class="skills-label">Soft Skills:</span> Problem-Solving, Analytical Thinking, Team Collaboration, Effective Communication, Adaptability.
+        <span class="skills-label">SOFT SKILLS:</span> Problem-Solving, Analytic Thinking, Team Collaboration, Effective Communication, Adaptability.
       </p>
     </div>
 
@@ -258,20 +293,23 @@
 
     <div class="edu-block">
       <div class="flex-row">
-        <span class="item-title">Master of Computer Applications (MCA)</span>
-        <span class="item-date">2024 — Jul 2026</span>
+        <span class="item-title">Masters of Computer Application (MCA)</span>
+        <span class="item-date">2024 — 2026</span>
       </div>
       <div class="item-subtitle">Dev Bhoomi Uttarakhand University</div>
+      <ul>
+        <li>Participated in the <strong>Boeing National Aero Modeling Festival</strong> at Indian Institute of Technology (<strong>IIT</strong>) Kanpur and developed a <strong>College Event Management Web Application</strong> as a major academic project.</li>
+      </ul>
     </div>
 
     <div class="edu-block">
       <div class="flex-row">
-        <span class="item-title">Bachelor of Computer Applications (BCA)</span>
+        <span class="item-title">Bachelors of Computer Application (BCA)</span>
         <span class="item-date">2021 — 2024</span>
       </div>
       <div class="item-subtitle">Shri Guru Ram Rai University</div>
       <p class="edu-note">
-        Focused on modular architecture and interactive design. University-level Volleyball Championship winner.
+        Focused on modular architecture and interactive design. University-level <strong>Volleyball Championship winner</strong>.
       </p>
     </div>
 

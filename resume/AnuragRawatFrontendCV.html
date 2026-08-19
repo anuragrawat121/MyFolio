@@ -6,7 +6,7 @@
     <style>
       @page {
         size: A4;
-        margin: 0.32in 0.45in;
+        margin: 0.30in 0.45in;
       }
 
       * {
@@ -16,9 +16,9 @@
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        font-size: 9.1pt;
-        line-height: 1.28;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 8.9pt;
+        line-height: 1.26;
         color: #111;
         background: #fff;
         -webkit-print-color-adjust: exact;
@@ -36,7 +36,8 @@
       }
 
       .name {
-        font-size: 19pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 21pt;
         font-weight: 700;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -45,12 +46,13 @@
       }
 
       .job-title {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-size: 9.5pt;
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #333;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
       }
 
       .contact {
@@ -60,36 +62,46 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 2px 5px;
+        gap: 2px 6px;
       }
 
       .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
         white-space: nowrap;
       }
 
+      .contact-icon {
+        width: 10px;
+        height: 10px;
+        fill: currentColor;
+      }
+
       .separator {
-        color: #666;
+        color: #777;
         font-weight: 300;
       }
 
       /* Section Titles */
       .section-title {
-        font-size: 9.8pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 9.6pt;
         font-weight: 700;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #000;
-        border-bottom: 1px solid #111;
+        border-bottom: 1.5px solid #000;
         padding-bottom: 1px;
-        margin: 7px 0 2px 0;
+        margin: 6px 0 2px 0;
       }
 
       /* Profile Summary */
       .summary {
         text-align: justify;
         text-justify: inter-word;
-        font-size: 9.1pt;
-        line-height: 1.28;
+        font-size: 8.9pt;
+        line-height: 1.26;
         color: #222;
       }
 
@@ -102,20 +114,23 @@
       }
 
       .item-title {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-weight: 700;
         font-size: 9.1pt;
         color: #000;
       }
 
       .item-date {
-        font-size: 9.1pt;
-        font-weight: 600;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 8.9pt;
+        font-weight: 400;
         color: #333;
         white-space: nowrap;
       }
 
       .item-subtitle {
-        font-size: 9.1pt;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 8.9pt;
         font-style: italic;
         color: #333;
         margin-bottom: 1px;
@@ -128,11 +143,16 @@
       }
 
       li {
-        font-size: 9.1pt;
+        font-size: 8.9pt;
         color: #222;
-        margin-bottom: 1px;
+        margin-bottom: 0.5px;
         text-align: justify;
         text-justify: inter-word;
+      }
+
+      strong {
+        font-weight: 700;
+        color: #000;
       }
 
       /* Skills */
@@ -141,15 +161,20 @@
       }
 
       .skills-line {
-        font-size: 9.1pt;
+        font-size: 8.9pt;
         color: #222;
         margin-bottom: 1.5px;
-        line-height: 1.28;
+        line-height: 1.26;
       }
 
       .skills-label {
+        font-family: Georgia, "Times New Roman", Times, serif;
         font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
         color: #000;
+        display: inline-block;
+        min-width: 135px;
       }
 
       .edu-block {
@@ -157,9 +182,9 @@
       }
 
       .edu-note {
-        font-size: 9.1pt;
+        font-size: 8.9pt;
         color: #333;
-        margin-top: 0px;
+        margin-top: 1px;
       }
     </style>
   </head>
@@ -168,21 +193,31 @@
       <h1 class="name">ANURAG RAWAT</h1>
       <div class="job-title">Frontend Developer</div>
       <div class="contact">
-        <span class="contact-item">Pauri Garhwal, Uttarakhand</span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Pauri Garhwal, Uttarakhand
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item">+91 7017349285</span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91 7017349285
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item"><a href="mailto:arwt8947@gmail.com">arwt8947@gmail.com</a></span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:arwt8947@gmail.com">arwt8947@gmail.com</a>
+        </span>
         <span class="separator">|</span>
-        <span class="contact-item"><a href="https://linkedin.com/in/anurag-rawat-03884b296" target="_blank">linkedin.com/in/anurag-rawat-03884b296</a></span>
-        <span class="separator">|</span>
-        <span class="contact-item"><a href="https://github.com/anuragrawat121" target="_blank">github.com/anuragrawat121</a></span>
+        <span class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+          <a href="https://linkedin.com/in/anurag-rawat-03884b296" target="_blank">linkedin.com/in/anurag-rawat</a>
+        </span>
       </div>
     </div>
 
     <div class="section-title">PROFILE SUMMARY</div>
     <p class="summary">
-      Frontend Developer &amp; MCA Candidate (July 2026) specializing in crafting pixel-perfect, high-performance user interfaces and responsive web applications. Expert in React 19, Next.js, TypeScript, Tailwind CSS, GSAP, and Framer Motion. Driven by a passion for UI/UX precision, micro-interactions, component-driven architecture, and AI-assisted workflows to build accessible, zero-latency digital experiences.
+      Passionate <strong>Frontend Developer</strong> and final-year MCA student specializing in crafting <strong>pixel-perfect, high-performance user interfaces</strong> and <strong>responsive web applications</strong>. Expert in <strong>React 19</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>GSAP</strong>, and <strong>Framer Motion</strong>. Driven by a passion for <strong>UI/UX precision</strong>, <strong>micro-interactions</strong>, <strong>component-driven architecture</strong>, and <strong>AI-assisted workflows</strong> to build accessible, <strong>zero-latency digital experiences</strong>.
     </p>
 
     <div class="section-title">EXPERIENCE &amp; INTERNSHIP</div>
@@ -193,8 +228,8 @@
     </div>
     <div class="item-subtitle">Codeware IT Pvt. Ltd.</div>
     <ul>
-      <li>Engineered modular, high-performance UI components using React.js and Tailwind CSS, optimizing for 100% cross-browser responsiveness and accessibility.</li>
-      <li>Integrated RESTful APIs with optimistic client-side state handling to ensure zero-latency UI/UX synchronization and smooth data rendering.</li>
+      <li>Engineered modular, high-performance UI components using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, optimizing for <strong>100% cross-browser responsiveness</strong> and accessibility.</li>
+      <li>Integrated <strong>RESTful APIs</strong> with optimistic client-side state handling to ensure <strong>zero-latency UI/UX synchronization</strong> and smooth data rendering.</li>
     </ul>
 
     <div class="flex-row">
@@ -203,8 +238,8 @@
     </div>
     <div class="item-subtitle">Uttarakhand Media Ventures Pvt. Ltd.</div>
     <ul>
-      <li>Built dynamic, interactive news portal interfaces in React, streamlining real-time content rendering and visual asset delivery.</li>
-      <li>Standardized reusable UI component libraries and modular CSS patterns, leveraging Git for version control and scalable frontend architecture.</li>
+      <li>Built <strong>dynamic, interactive news portal interfaces</strong> in React, streamlining real-time content rendering and visual asset delivery.</li>
+      <li>Standardized <strong>reusable UI component libraries</strong> and modular CSS patterns, leveraging <strong>Git</strong> for version control and scalable <strong>frontend architecture</strong>.</li>
     </ul>
 
     <div class="section-title">KEY PROJECTS</div>
@@ -213,47 +248,47 @@
       <span class="item-title">MandiSync | Crop Arbitrage Dashboard for Indian Mandis</span>
     </div>
     <ul>
-      <li>Architected an interactive data dashboard with Next.js, TypeScript, and Leaflet, rendering real-time APMC mandi price comparisons and route corridor maps.</li>
-      <li>Built responsive filter controls, dynamic data tables, and client-side visualization components optimized for mobile and desktop viewports.</li>
+      <li>Architected an interactive data dashboard with <strong>Next.js</strong>, <strong>TypeScript</strong>, and <strong>Leaflet</strong>, rendering real-time <strong>APMC mandi price comparisons</strong> and route corridor maps.</li>
+      <li>Built <strong>responsive filter controls</strong>, dynamic data tables, and client-side visualization components optimized for mobile and desktop viewports.</li>
     </ul>
 
     <div class="flex-row">
       <span class="item-title">ArtByAnjali | Interactive High-Resolution Art Gallery</span>
     </div>
     <ul>
-      <li>Solved image loading latency in high-resolution art galleries by implementing custom lazy-loading, cloud image optimization, and smooth layout shifts.</li>
-      <li>Designed immersive, 60fps micro-interactions using GSAP animations and Tailwind CSS for a premium exhibition user experience.</li>
+      <li>Solved image loading latency in high-resolution art galleries by implementing custom <strong>lazy-loading</strong>, <strong>cloud image optimization</strong>, and smooth layout shifts.</li>
+      <li>Designed <strong>immersive, 60fps micro-interactions</strong> using <strong>GSAP animations</strong> and <strong>Tailwind CSS</strong> for a <strong>premium exhibition user experience</strong>.</li>
     </ul>
 
     <div class="flex-row">
       <span class="item-title">College Event Management Web App</span>
     </div>
     <ul>
-      <li>Developed an intuitive event registration portal with React, streamlining multi-step user workflows and interactive form validations.</li>
-      <li>Implemented a centralized dashboard UI with real-time state updates, reducing administrative bottlenecks and navigation friction across campus users.</li>
+      <li>Developed an <strong>intuitive event registration portal</strong> with <strong>React</strong>, streamlining multi-step user workflows and interactive form validations.</li>
+      <li>Implemented a <strong>centralized dashboard UI</strong> with real-time state updates, reducing administrative bottlenecks and navigation friction across campus users.</li>
     </ul>
 
     <div class="flex-row">
       <span class="item-title">Luxury Ecommerce | High-End Retail Platform</span>
     </div>
     <ul>
-      <li>Engineered a high-fidelity React 19 luxury shopping interface with custom Context-driven state management and optimized useMemo product filtering.</li>
-      <li>Delivered a dark-themed UI featuring Framer Motion page transitions, responsive product carousels, and zero-delay layout rendering.</li>
+      <li>Engineered a <strong>high-fidelity React 19 luxury shopping interface</strong> with custom <strong>Context-driven state management</strong> and <strong>optimized useMemo product filtering</strong>.</li>
+      <li>Delivered a <strong>dark-themed UI</strong> featuring <strong>Framer Motion page transitions</strong>, responsive product carousels, and <strong>zero-delay layout rendering</strong>.</li>
     </ul>
 
     <div class="section-title">TECHNICAL &amp; PROFESSIONAL SKILLS</div>
     <div class="skills-container">
       <p class="skills-line">
-        <span class="skills-label">Frontend Core:</span> React.js, React 19, Next.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Component Architecture, State Management (Context API).
+        <span class="skills-label">FRONTEND CORE:</span> React.js, React 19, Next.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Component Architecture, State Management (Context API).
       </p>
       <p class="skills-line">
-        <span class="skills-label">UI Animation &amp; Styling:</span> GSAP, Framer Motion, Responsive Web Design, Flexbox/Grid, CSS Modules, Cross-Browser Compatibility, Performance Optimization.
+        <span class="skills-label">UI ANIMATION &amp; STYLING:</span> GSAP, Framer Motion, Responsive Web Design, Flexbox/Grid, CSS Modules, Cross-Browser Compatibility, Performance Optimization.
       </p>
       <p class="skills-line">
-        <span class="skills-label">Tools &amp; Workflow:</span> Cursor, Gemini, Claude, GPT-4o, VS Code, Git/GitHub, Chrome DevTools, API Integration, UI/UX Implementation.
+        <span class="skills-label">AI TOOLS &amp; WORKFLOW:</span> <strong>Cursor</strong>, <strong>Antigravity</strong>, <strong>Stitch</strong>, <strong>Gemini</strong>, <strong>Claude</strong>, <strong>GPT-4o</strong>, <strong>Vibe Coding</strong>, VS Code, Git/GitHub, Chrome DevTools, API Integration, UI/UX Implementation.
       </p>
       <p class="skills-line">
-        <span class="skills-label">Soft Skills:</span> Problem-Solving, Analytical Thinking, Team Collaboration, Effective Communication, Adaptability.
+        <span class="skills-label">SOFT SKILLS:</span> Problem-Solving, Analytic Thinking, Team Collaboration, Effective Communication, Adaptability.
       </p>
     </div>
 
@@ -261,20 +296,23 @@
 
     <div class="edu-block">
       <div class="flex-row">
-        <span class="item-title">Master of Computer Applications (MCA)</span>
-        <span class="item-date">2024 — Jul 2026</span>
+        <span class="item-title">Masters of Computer Application (MCA)</span>
+        <span class="item-date">2024 — 2026</span>
       </div>
       <div class="item-subtitle">Dev Bhoomi Uttarakhand University</div>
+      <ul>
+        <li>Participated in the <strong>Boeing National Aero Modeling Festival</strong> at Indian Institute of Technology (<strong>IIT</strong>) Kanpur and developed a <strong>College Event Management Web Application</strong> as a major academic project.</li>
+      </ul>
     </div>
 
     <div class="edu-block">
       <div class="flex-row">
-        <span class="item-title">Bachelor of Computer Applications (BCA)</span>
+        <span class="item-title">Bachelors of Computer Application (BCA)</span>
         <span class="item-date">2021 — 2024</span>
       </div>
       <div class="item-subtitle">Shri Guru Ram Rai University</div>
       <p class="edu-note">
-        Focused on modular architecture and interactive design. University-level Volleyball Championship winner.
+        Focused on modular architecture and interactive design. University-level <strong>Volleyball Championship winner</strong>.
       </p>
     </div>
 
